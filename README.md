@@ -9,6 +9,7 @@ O componente `FormTodo` é responsável por capturar o nome e a mensagem do usu�
 - Adicionar comentários com nome e mensagem.
 - Substituir o nome pelo valor "Anonymous" caso o campo de nome não seja preenchido.
 - Excluir comentários da lista.
+- Adiciona o armazenamento local (LocalStorage) para persistência de comentários.
 
 ## Tecnologias Utilizadas
 
