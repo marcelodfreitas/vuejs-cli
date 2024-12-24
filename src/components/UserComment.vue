@@ -34,15 +34,20 @@ export default {
   },
   data() {
     return {
-      comments: []
+      comments: JSON.parse(localStorage.getItem('comments')) || []  // Recupera os comentários do localStorage
     };
   },
   methods: {
     newComment(comment) {
       this.comments.push(comment);
+      this.saveComments();  // Salva os comentários no localStorage após adicionar um novo
     },
     delComment(index) {
       this.comments.splice(index, 1);
+      this.saveComments();  // Salva os comentários no localStorage após excluir um comentário
+    },
+    saveComments() {
+      localStorage.setItem('comments', JSON.stringify(this.comments));  // Salva os comentários no localStorage
     }
   },
   computed: {
